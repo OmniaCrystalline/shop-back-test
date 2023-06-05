@@ -51,4 +51,5 @@ app.use((err, req, res, next) => {
 router.get("/allgoods", controllerGoods.getAll);
 router.get("/onetype/:query", controllerGoods.getOneType);
 router.post("/", controllerOrders.addOrder);
-router.get("/ordersOfUser", controllerOrders.getOrders);
+router.post("/ordersOfUser", controllerOrders.getOrders);
+router.post('/addmenu', controllerGoods.addMenu)

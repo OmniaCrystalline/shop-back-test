@@ -13,9 +13,17 @@ async function getAll(req, res, next) {
 
 async function getOneType(req, res, next) {
   const { query } = req.params;
-  console.log("query", query);
   try {
     const data = await Product.find({ seller: query });
+    return res.json({ data });
+  } catch (error) {
+    return res.json(error.message);
+  }
+}
+
+async function addMenu(req, res, next) {
+  try {
+    const data = await Product.insertMany(req.body);
     return res.json({ data });
   } catch (error) {
     return res.json(error.message);
@@ -25,4 +33,5 @@ async function getOneType(req, res, next) {
 module.exports = {
   getAll,
   getOneType,
+  addMenu,
 };
