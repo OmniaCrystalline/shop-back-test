@@ -19,7 +19,7 @@ const ProductSchema = new Schema({
     type: Number,
     required: [true, "Price required"],
   },
-  weigth: {
+  weight: {
     type: Number,
     required: [true, "Weight required"],
   },

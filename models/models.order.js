@@ -22,7 +22,7 @@ const orderItemSchema = new mongoose.Schema({
     required: [true, "Price required"],
     unique: false,
   },
-  weigth: {
+  weight: {
     type: Number,
     required: [true, "Weight required"],
     unique: false,
@@ -42,7 +42,6 @@ const orderSchema = new mongoose.Schema({
     type: Date,
     required: [true, "Date is required"],
     unique: false,
-
   },
   name: {
     type: String,
